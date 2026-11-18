@@ -3,6 +3,7 @@ import { createObserveModule } from '@nestjs/observe';
 import { AppController } from './app.controller.js';
 import { AppService } from './app.service.js';
 import { ServicosModule } from './servicos/servicos.module.js';
+import { ClientesModule } from './clientes/clientes.module';
 
 export const { ObserveModule, ObserveInstrument } = createObserveModule();
 
@@ -17,6 +18,7 @@ export const { ObserveModule, ObserveInstrument } = createObserveModule();
       serviceId: 'barbearia-api',
     }),
     ServicosModule,
+    ClientesModule,
   ],
   controllers: [AppController],
   providers: [AppService],
